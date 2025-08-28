@@ -6,7 +6,7 @@ _start:
         la gp, __global_pointer$ # symbol is set by linker
         .option pop
         la sp, __stack_top # symbol is set by linker
-        # jump to main() func
-        call main
+        # jump to start()
+        call start
         # end of the program
         tail terminate

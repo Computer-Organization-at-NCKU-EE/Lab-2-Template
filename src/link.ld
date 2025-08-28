@@ -29,6 +29,7 @@ SECTIONS
     . = ORIGIN(RAM);
     .data : ALIGN(4)
     {
+        PROVIDE(_sidata = LOADADDR(.data));
         PROVIDE(_sdata = .);
         PROVIDE(__global_pointer$ = _sdata + 0x800);
         *(.data)
