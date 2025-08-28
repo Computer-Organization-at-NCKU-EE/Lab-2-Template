@@ -7,22 +7,12 @@ endif()
 # project information
 project(BaseRuntime VERSION 0.1.0
         DESCRIPTION "Conerstone of porting newlib into our own hardware platform"
-        LANGUAGES C)
+        LANGUAGES C ASM)
 
 # set C standard
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED True)
 
-# include src subdirectory
+# include src and test-progs subdirectories
 add_subdirectory(src)
-
-# Testing
-if (PROJECT_IS_TOP_LEVEL)
-    include(CTest)
-endif()
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
-    add_subdirectory(tests)
-endif()
-
-# set compiler by  riscv-gnu-toolchain
-set(CMAKE_C_COMPILER riscv32-unknown-elf-gcc)
+add_subdirectory(test-progs)
