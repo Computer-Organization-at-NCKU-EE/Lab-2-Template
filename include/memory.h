@@ -3,8 +3,8 @@
 
 #include <stddef.h>
 
-extern void alloc_init(void);
-extern void *malloc(size_t size);
-extern void free(void *ptr);
+extern void my_alloc_init(void);
+extern void *my_malloc(size_t size);
+extern void my_free(void *ptr);
 
 #endif

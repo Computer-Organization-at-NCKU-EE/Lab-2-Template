@@ -6,7 +6,7 @@ set(CMAKE_ASM_COMPILER riscv32-unknown-elf-gcc)
 set(COMMON_COMPILE_FLAG -march=rv32i -mabi=ilp32 -ffreestanding -fno-builtin -Wall -Werror)
 
 # test-progs list
-set(TEST_PROGS main msort qsort matmul)
+set(TEST_PROGS main msort qsort matmul malloc_test)
 
 foreach(prog IN LISTS TEST_PROGS)
     # setup target main (executable)
