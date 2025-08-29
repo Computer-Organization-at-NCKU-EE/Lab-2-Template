@@ -2,6 +2,11 @@
 
 #include "print.h"
 
+/*
+ * extern char a[] is correct
+ * while extern char *a is incorrect!
+ * Array and Pointer are two different things!
+ */
 extern char _sheap[];
 extern char _eheap[];
 static char *heap_ptr;
