@@ -17,7 +17,8 @@ foreach(prog IN LISTS TEST_PROGS)
     target_include_directories(${prog} PRIVATE ${CMAKE_SOURCE_DIR}/include)
     target_compile_options(${prog} PRIVATE ${COMMON_COMPILE_FLAG})
     target_link_libraries(${prog} startup base gcc)
-    target_link_options(${prog} PRIVATE -nostdlib -nostartfiles -static -T${CMAKE_SOURCE_DIR}/src/link.ld -Xlinker --print-memory-usage)
+    # target_link_options(${prog} PRIVATE -nostdlib -nostartfiles -static -T${CMAKE_SOURCE_DIR}/src/link.ld -Xlinker --print-memory-usage)
+    target_link_options(${prog} PRIVATE -nostdlib -nostartfiles -static -T${CMAKE_SOURCE_DIR}/src/link.ld)
 
     # add custom commands to generate disassembly dump and hex dump files
     add_custom_command(
