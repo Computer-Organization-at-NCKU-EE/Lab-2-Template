@@ -9,13 +9,9 @@ MEMORY
 
 SECTIONS
 {
-    .startup : ALIGN(4)
-    {
-        KEEP(*(.text._start*))
-    } > ROM
-
     .text : ALIGN(4)
     {
+        KEEP(*(.text.start*))
         *(.text)
         *(.text.*)
     } > ROM

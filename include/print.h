@@ -3,9 +3,9 @@
 
 #include <stdint.h>
 
-extern void putc(char c);
-extern void puts(char *s);
-extern void putint(int i);
-extern void printf(char *format, ...);
+extern void my_putc(char c);
+extern void my_puts(char *s);
+extern void my_putint(int i);
+extern void my_printf(char *format, ...);
 
 #endif

@@ -4,29 +4,29 @@
 
 #include <stdarg.h>
 
-void putc(char c) {
+void my_putc(char c) {
     platform_outb(c);
 }
 
-void puts(char *s) {
+void my_puts(char *s) {
     while (*s != '\0') {
-        putc(*(s++));
+        my_putc(*(s++));
     }
 }
 
-void putint(int numb) {
+void my_putint(int numb) {
     if (numb < 0) {
-        putc('-');
+        my_putc('-');
         numb = -numb; // convert to positive number
     }
 
     if (numb / 10) {
-        putint(numb / 10);
+        my_putint(numb / 10);
     }
-    putc((numb % 10) + '0');
+    my_putc((numb % 10) + '0');
 }
 
-void printf(char *format, ...) {
+void my_printf(char *format, ...) {
     va_list args;
     va_start(args, format);
 
@@ -36,23 +36,23 @@ void printf(char *format, ...) {
             switch (*format) {
             case 'c': { // char
                 char c = va_arg(args, int);
-                putc(c);
+                my_putc(c);
                 break;
             }
             case 'd': { // int
                 int numb = va_arg(args, int);
-                putint(numb);
+                my_putint(numb);
                 break;
             }
             case 's': { // string
                 char *s = va_arg(args, char *);
-                puts(s);
+                my_puts(s);
                 break;
             }
             default: break;
             }
         } else {
-            putc(*format);
+            my_putc(*format);
         }
         format++;
     }

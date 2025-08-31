@@ -38,6 +38,6 @@ void my_free(void *ptr) {
     // free all memroy at once
     if (allocated_cnt == 0) {
         heap_ptr = _sheap;
-        printf("Freeing up all allocated heap memory...\n");
+        my_printf("Freeing up all allocated heap memory...\n");
     }
 }
