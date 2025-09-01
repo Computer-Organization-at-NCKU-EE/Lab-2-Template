@@ -27,9 +27,9 @@ void start(void) {
     extern char _sidata[];
     extern char _sdata[];
     extern char _edata[];
-    size_t data_copy_size     = (size_t)(_edata - _sdata);
-    volatile uint8_t *src_ptr = (uint8_t *)_sidata;
-    volatile uint8_t *dst_ptr = (uint8_t *)_sdata;
+    size_t data_copy_size = (size_t)(_edata - _sdata);
+    uint8_t *src_ptr      = (uint8_t *)_sidata;
+    uint8_t *dst_ptr      = (uint8_t *)_sdata;
     for (size_t i = 0; i < data_copy_size; i++) {
         *(dst_ptr++) = *(src_ptr++);
     }
