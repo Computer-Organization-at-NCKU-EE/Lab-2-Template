@@ -10,7 +10,7 @@ extern void terminate(void) __attribute__((noreturn));
 extern void platform_outb(char c);
 
 // define some MMIO base addresses
-#define TEXT_BUFFER_BASE 0xfffffff8
-#define HALT_BASE 0xfffffffc
+#define TEXT_BUFFER_BASE 0xfffffff7
+#define HALT_BASE 0xfffffffb
 
 #endif
