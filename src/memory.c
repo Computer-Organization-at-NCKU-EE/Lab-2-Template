@@ -3,6 +3,16 @@
 #include "print.h"
 
 /*
+ * replace built-in memcpy function
+ */
+void *memcpy(void *dest, const void *src, size_t n) {
+    for (size_t i = 0; i < n; i++) {
+        ((char *)dest)[i] = ((char *)src)[i];
+    }
+    return dest;
+}
+
+/*
  * extern char a[] is correct
  * while extern char *a is incorrect!
  * Array and Pointer are two different things!
