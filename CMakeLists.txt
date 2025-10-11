@@ -15,4 +15,6 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 # include src and test-progs subdirectories
 add_subdirectory(src)
+add_subdirectory(iss)
 add_subdirectory(test-progs)
+add_subdirectory(asm-prog-assignment)

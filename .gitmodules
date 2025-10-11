@@ -1,0 +1,3 @@
+[submodule "iss"]
+	path = iss
+	url = git@github.com:Computer-Organization-at-NCKU-EE/ISA-Simulator.git

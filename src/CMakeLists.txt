@@ -1,12 +1,7 @@
-# set compiler by  riscv-gnu-toolchain
-set(CMAKE_C_COMPILER riscv32-unknown-elf-gcc)
-set(CMAKE_ASM_COMPILER riscv32-unknown-elf-gcc)
+include(${CMAKE_SOURCE_DIR}/cmake/riscv.cmake)
 
 # set source file list of libbase
 set(LIB_SRCS basic.c print.c memory.c)
-
-# set common compile flags
-set(COMMON_COMPILE_FLAG -march=rv32i -mabi=ilp32 -ffreestanding -fno-builtin -Wall -Werror)
 
 # setup target base (static library)
 add_library(base STATIC)
