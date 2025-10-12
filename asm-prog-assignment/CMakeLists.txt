@@ -8,10 +8,10 @@ target_link_libraries(ArraySort startup base gcc)
 target_link_options(ArraySort PRIVATE -nostdlib -nostartfiles -static -T${PROJECT_SOURCE_DIR}/src/link.ld)
 # generate random test case for Array Sort
 string(RANDOM LENGTH 2 ALPHABET "123456789" MERGE_SORT_RANDOM_ARRAY_SIZE)
-set(MERGE_SORT_RANDOM_ARRAY "")
-foreach(i RANGE 0 ${MERGE_SORT_RANDOM_ARRAY_SIZE})
+set(MERGE_SORT_RANDOM_ARRAY "123")
+foreach(i RANGE 2 ${MERGE_SORT_RANDOM_ARRAY_SIZE})
   string(RANDOM LENGTH 2 ALPHABET "123456789" random_val)
-  string(APPEND MERGE_SORT_RANDOM_ARRAY, "{random_val}, ")
+  string(APPEND MERGE_SORT_RANDOM_ARRAY ", ${random_val}")
 endforeach()
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/merge_config.h.in ${CMAKE_CURRENT_BINARY_DIR}/merge_config.h)
 

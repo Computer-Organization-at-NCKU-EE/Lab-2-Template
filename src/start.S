@@ -9,4 +9,4 @@ _start:
         # jump to start()
         call start
         # end of the program
-        tail terminate
+        j terminate

@@ -1,9 +1,16 @@
 #include "merge_config.h"
 
+#include "print.h"
+
 extern void array_sort(int *arr_ptr, unsigned arr_size);
 
 int array_sort_verifier(int *arr_ptr, unsigned arr_size) {
-    //
+    for (int i = 0; i < arr_size - 1; i++) {
+        my_printf("i: %d, i+1: %d\n", arr_ptr[i], arr_ptr[i + 1]);
+        if (arr_ptr[i] > arr_ptr[i + 1]) {
+            return -1;
+        }
+    }
     return 0;
 }
 

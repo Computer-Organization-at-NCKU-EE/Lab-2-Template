@@ -3,7 +3,11 @@
 extern void sudoku_solver(int *arr_ptr);
 
 int sudoku_verifier(int *arr_ptr) {
-    //
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            //
+        }
+    }
     return 0;
 }
 

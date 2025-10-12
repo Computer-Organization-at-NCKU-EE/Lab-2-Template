@@ -15,7 +15,7 @@ void platform_outb(char c) {
     *text_buf               = c;
 }
 
-void start(void) {
+int start(void) {
     // initialize .bss section
     extern char _sbss[];
     extern char _ebss[];
@@ -35,5 +35,5 @@ void start(void) {
     }
 
     extern int main(void);
-    main();
+    return main();
 }

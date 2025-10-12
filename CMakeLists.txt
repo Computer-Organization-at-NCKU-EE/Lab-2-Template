@@ -18,3 +18,11 @@ add_subdirectory(src)
 add_subdirectory(iss)
 add_subdirectory(test-progs)
 add_subdirectory(asm-prog-assignment)
+
+# Testing
+if (PROJECT_IS_TOP_LEVEL)
+  include(CTest)
+  if (BUILD_TESTING)
+    add_subdirectory(tests)
+  endif()
+endif()

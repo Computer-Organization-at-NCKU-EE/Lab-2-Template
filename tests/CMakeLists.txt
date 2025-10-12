@@ -1,8 +1,6 @@
 # Tester for Merge Sort (array_sort)
-add_executable(ArraySortChecker array_sort_checker.c)
-target_link_libraries(ArraySortChecker iss)
-add_test(NAME MergeSortTester )
-
-# Tester for 2x2 Sudoku Solver
-add_executable(SudokuSolverTester sudoku_solver_tester.c)
-target_link_libraries(SudokuSolverTester iss)
+add_executable(GeneralReturnValueChecker general_return_value_checker.c)
+target_link_libraries(GeneralReturnValueChecker iss)
+# add MergeSortTester and SudokuSolverTester
+add_test(NAME MergeSortTester COMMAND GeneralReturnValueChecker ${PROJECT_BINARY_DIR}/asm-prog-assignment/ArraySort)
+add_test(NAME SudokuSolverTester COMMAND GeneralReturnValueChecker ${PROJECT_BINARY_DIR}/asm-prog-assignment/Sudoku)
