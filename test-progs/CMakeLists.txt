@@ -1,4 +1,4 @@
-include(${CMAKE_SOURCE_DIR}/cmake/riscv.cmake)
+include(${PROJECT_SOURCE_DIR}/cmake/rv32i.cmake)
 
 # test-progs list
 set(TEST_PROGS msort qsort matmul malloc_test)

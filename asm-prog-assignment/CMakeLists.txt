@@ -1,4 +1,4 @@
-include(${CMAKE_SOURCE_DIR}/cmake/riscv.cmake)
+include(${PROJECT_SOURCE_DIR}/cmake/rv32i.cmake)
 
 # setup target ArraySort
 add_executable(ArraySort ${CMAKE_CURRENT_SOURCE_DIR}/merge.c ${CMAKE_CURRENT_SOURCE_DIR}/merge.S)

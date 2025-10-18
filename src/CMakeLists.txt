@@ -1,4 +1,4 @@
-include(${CMAKE_SOURCE_DIR}/cmake/riscv.cmake)
+include(${PROJECT_SOURCE_DIR}/cmake/rv32i.cmake)
 
 # set source file list of libbase
 set(LIB_SRCS basic.c print.c memory.c)
